@@ -1,6 +1,6 @@
 Engine.start(1024, 768, "cnv");
 
-let enemies = [], score = 0;
+let enemies = [], score = 112;
 
 let enemy_ai = (node) => {
     node.move(Engine.vector2(0, -0.1))
@@ -16,7 +16,7 @@ let bullet_ai = (node) => {
             enemies[i].destroy();
             node.destroy();
             enemies.splice(i, 1);
-            score == 112;
+            score++;
             break;
         }
     }
@@ -44,9 +44,9 @@ Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engi
         fire(node.position);
     if(score = 112){
         Engine.create_node({
-            position : Engine.vector2(200, 200), 
+            position : Engine.vector2(100, 20), 
             size : Engine.vector2(200, 60), 
-            color: "#fff"})
+            color: "#144ba3"});
     }
 }});
 Engine.set_draw((s) => {
