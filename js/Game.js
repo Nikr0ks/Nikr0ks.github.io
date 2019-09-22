@@ -16,7 +16,7 @@ let bullet_ai = (node) => {
             enemies[i].destroy();
             node.destroy();
             enemies.splice(i, 1);
-            score++;
+            score == 112;
             break;
         }
     }
@@ -42,6 +42,12 @@ Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engi
         node.move(Engine.vector2(-1, 0))
     if(Engine.key('Space'))
         fire(node.position);
+    if(score = 112){
+        Engine.create_node({
+            position : Engine.vector2(200, 200), 
+            size : Engine.vector2(200, 60), 
+            color: "#fff"})
+    }
 }});
 Engine.set_draw((s) => {
     s.draw_text(1024/2-60, 15, '#8cff00', 'Игровой счет: '+score);
