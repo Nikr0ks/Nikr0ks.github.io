@@ -1,6 +1,6 @@
 Engine.start(1024, 768, "cnv");
 
-let enemies = [], score = 112;
+let enemies = [], score = 0;
 
 let enemy_ai = (node) => {
     node.move(Engine.vector2(0, -0.1))
@@ -42,12 +42,6 @@ Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engi
         node.move(Engine.vector2(-1, 0))
     if(Engine.key('Space'))
         fire(node.position);
-    if(score = 112){
-        Engine.create_node({
-            position : Engine.vector2(1024/2-80, 60), 
-            size : Engine.vector2(300, 60), 
-            color: "#144ba3"});
-    }
 }});
 Engine.set_draw((s) => {
     s.draw_text(1024/2-60, 15, '#8cff00', 'Игровой счет: '+score);
