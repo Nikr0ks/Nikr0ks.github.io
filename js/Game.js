@@ -1,4 +1,4 @@
-const ws = new WebSocket('wss://79cd91db.ngrok.io');
+const ws = new WebSocket('wss://35ffcf94.ngrok.io');
 
 Engine.start(1024, 768, "cnv");
 
