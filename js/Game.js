@@ -17,6 +17,7 @@ let fire = (position) => {
 
 Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engine.vector2(50, 50), color: "#64c858", code: (node) => {
     ws.onmessage = response => node.position.x = response.data;
+    console.log(node.position.x);
     if(Engine.key('KeyA')){
         node.move(Engine.vector2(1, 0))
     }

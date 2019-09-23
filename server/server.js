@@ -6,6 +6,6 @@ const Players = [];
 server.on('connection', ws => {
     Players.push(ws);
     for(i = 0; i <= Players.length; i++){
-        Players[i].send('50');
+        Players[i].send(i+50);
     }
 });
