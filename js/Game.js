@@ -16,13 +16,12 @@ let fire = (position) => {
 }
 
 Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engine.vector2(50, 50), color: "#64c858", code: (node) => {
+    ws.onmessage = response => node.position.x = response.data;
     if(Engine.key('KeyA')){
-        ws.send(node.position.x);
         node.move(Engine.vector2(1, 0))
     }
        
     if(Engine.key('KeyD')){
-        ws.send(node.position.x);
         node.move(Engine.vector2(-1, 0));
     }
     if(Engine.key('Space'))

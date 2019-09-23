@@ -1,7 +1,11 @@
 const webs = require('ws');
 
 const server = new webs.Server({port: 3000});
+const Players = [];
 
 server.on('connection', ws => {
-    ws.onmessage = Response => console.log(Response.data);
+    Players.push(ws);
+    for(i = 0; i <= Players.length; i++){
+        Players[i].send('50');
+    }
 });
