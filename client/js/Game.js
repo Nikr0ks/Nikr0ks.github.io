@@ -40,7 +40,7 @@ Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engi
         node.move(Engine.vector2(1, 0))
     if(Engine.key('KeyD'))
         node.move(Engine.vector2(-1, 0))
-    node.vector2.x++;
+    node.position.x++;
     if(Engine.key('Space'))
         fire(node.position);
 }});
