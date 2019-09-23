@@ -44,8 +44,8 @@ Engine.create_node({position : Engine.vector2(1024/2-25, 768-50-30), size : Engi
         fire(node.position);
     if(score = 112){
         Engine.create_node({
-            position : Engine.vector2(100, 20), 
-            size : Engine.vector2(200, 60), 
+            position : Engine.vector2(1024/2-80, 60), 
+            size : Engine.vector2(300, 60), 
             color: "#144ba3"});
     }
 }});
